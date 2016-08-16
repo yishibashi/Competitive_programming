@@ -1,55 +1,71 @@
 #include <iostream>
-#include <algorithm>
-#include <string>
 #include <vector>
-#include <cstdio>
+#include <string>
+#include <map>
+
 using namespace std;
 
-struct S{
-    char alp;
-    int nvotes;
+struct V{
+    char whc;
+    int nmb;
 };
 
-int main() {
-    vector<S> votes;
-    while(true) {
+int main()
+{
+    int n;
+    while (scanf("%d",&n), n) {
+        cout << "in" << endl;
+        int votes[26] = {0};
+        int max1 = -1, max2 = -1;
+        int maxitr1 = -1, maxitr2 = -1;
 
-        int n;
-        scanf("%d",&n);
-        cout << n << endl;
-        if(n==0) break;
-        int np = n;
-        int max1, max2;
-        char v = 0x00;
-        // 初期化
-        votes.clear();
-        for (char j = 'A'; j <= 'Z'; ++j) {
-            votes.push_back(S{j,0});
-        }
+        int i;
+        for (i = 0; i < n; ++i) {
 
-        // 票を受け取る
-        for (int i = 0; i < n; ++i) {
-            cin >> v;
-            int m = (int) (v - 'A');
-            votes[m].nvotes += 1;
+            cout << i << endl;
+            // 票数++
+            char w;
+            cin >> w;
+            votes[(int) (w - 'A')] += 1;
 
-            vector<int> rank;
-            for (int j = 0; j < 26; ++j) {
-                rank.push_back(votes[j].nvotes);
+
+            /*
+            // 配列要素表示
+            for (char j = 'A'; j <= 'Z'; ++j) {
+                cout << j << " " << votes[(int)(j-'A')] << " / ";
+            }cout << endl;
+            */
+
+            // set max1
+            for (int k = 0; k < 26; ++k) {
+                if (max1 < votes[k]) {
+                    max1 = votes[k];
+                    maxitr1 = k;
+                }
             }
-            sort(rank.begin(), rank.end(),greater<int>());
-            max1 = rank[0];
-            max2 = rank[1];
-            rank.clear();
-            if(max1 > (max2 + np-i-1)){
-                cout << v << " " << i+1 << endl;
-                break;
+
+            // set max2
+            for (int l = 0; l < 26; ++l) {
+                if (l != maxitr1 && max2 < votes[l]) {
+                    max2 = votes[l];
+                    maxitr2 = l;
+                }
             }
-            else if(max1 == max2 && np-i-1 == 0){
+            /*
+            cout << max1 << "/" << maxitr1 << endl;
+            cout << max2 << "/" << maxitr2 << endl;
+            cout << (n - i - 1) << "---------" << endl;
+            */
+            if (max1 > (max2 + (n - i - 1)) ) {
+                cout << (char) ('A' + maxitr1) << " " << i + 1 << endl;
+                i+=n;
+            }
+            else if ((max1 == max2) && ((n - i - 1) == 0)) {
                 cout << "TIE" << endl;
-                break;
             }
+            else;
         }
+        cout << "out" << endl;
     }
     return 0;
 }

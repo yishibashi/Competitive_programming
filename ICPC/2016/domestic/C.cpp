@@ -12,7 +12,7 @@ int main()
         for (int i = 0; i < m; ++i) sieve[i] = 0;
 
         int count = 1;
-        for(int j = m; j < sieve.size(); j++){99
+        for(int j = m; j < sieve.size(); j++){
             if(count > n) break;
             if(sieve[j] != 0) {
                 count++;
