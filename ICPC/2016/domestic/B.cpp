@@ -56,6 +56,8 @@ int main()
             cout << max2 << "/" << maxitr2 << endl;
             cout << (n - i - 1) << "---------" << endl;
             */
+
+            
             if (max1 > (max2 + (n - i - 1)) ) {
                 cout << (char) ('A' + maxitr1) << " " << i + 1 << endl;
                 i+=n;
