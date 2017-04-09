@@ -1,5 +1,6 @@
 a.out
 *.idea
 *.txt
+CMakeLists.txt
 .python-version
 note/
