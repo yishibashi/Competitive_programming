@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en-US"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>The 2013 ACM-ICPC Asia Aizu Regional Contest :: Domestic contest problem set</title>
+        <meta name="KEYWORDS" content="icpc2013,aizu,acm contest,acm/icpc,programming contest">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="2013-j_files/base.css">
+	<link rel="stylesheet" href="2013-j_files/style.css">
+	<!--[if lt IE 7]><link rel="stylesheet" href="css/font-awesome-ie7.min.css"/><![endif]-->
+
+	<script type="text/javascript" async="" src="2013-j_files/ga.html"></script>
+        	<link href="2013-j_files/default.css" rel="stylesheet" type="text/css">
+	
+
+</head>
+<body>
+
+
+<div id="container">
+ <div id="content-wrapper" class="clearfix row">
+
+  <div id="content">
+    <div>
+<table class="main">
+<!-- ------------ 1st row ---------------- -->
+<!-- |        ACM Inter Collegiate Programming Contest       | -->
+<tbody><tr>
+ <td colspan="2" align="center">
+  
+<h1><img src="2013-j_files/icpc_logo.png" alt="acm International Collegiate Programming Contest"></h1>
+<div class="banner" align="right"><font size="-1">
+<i>2013/7/12 Aizu</i></font></div> </td>
+</tr>
+
+<!-- ------------ 2nd row ---------------- -->
+<!-- menu in the 1st column. empty in the 2nd. -->
+<tr>
+ <td class="menu" rowspan="4" nowrap="nowrap" valign="top">
+  </td>
+ <td>
+  </td>
+</tr>
+
+<!-- ------------ 3rd row ---------------- -->
+<!-- no 1st column. empty in the 2nd. -->
+<tr>
+ <td>
+  <a href="./domjdata2013.zip">審判データ</a>
+
+  </td>
+</tr>
+
+<!-- ------------ 4th row ------------ -->
+<!-- nothing in the 1st column. everything else in the 2nd -->
+<tr>
+ <td class="main">
+<div><a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+</div>
+<a name="section_A"></a><h2>Problem A</h2>
+<!-- begin ja only -->
+<h3><u>整長方形</u></h3>
+<!-- end ja only -->
+
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+高さ<i>h</i>と幅<i>w</i>がともに整数である長方形を考えよう．そのような長方形を<b>整長方形</b>と呼ぶ．以下，この問題では横長の整長方形，すなわち <i>w</i> &gt; <i>h</i> である整長方形のみを考える．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+横長整長方形の大小関係を次のように定めよう．
+</p><ol>
+<li>対角線の長さが短いほうが小さい．</li>
+<li>対角線の長さが同じならば，高さの低いほうが小さい．</li>
+</ol>
+<img src="2013-j_files/A-ja.png">
+<p></p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+与えられた横長整長方形に対し，それより大きい最小の横長整長方形を求めよ．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Input</h3>
+
+<div>
+<!-- begin ja only -->
+<p>
+入力全体は複数のデータセットからなる．データセットの数は100以下である．
+各データセットはひとつの横長整長方形を記述しており，その高さ<i>h</i>と幅<i>w</i>がひとつの空白で区切られた以下のような1行である．
+</p>
+<!-- end ja only -->
+<blockquote>
+<i>h</i> <i>w</i>
+</blockquote>
+
+<!-- begin ja only -->
+<p>
+各データセットについて，<i>h</i>と<i>w</i>（&gt;<i>h</i>）は，ともに，1以上100以下の整数である．
+</p>
+<!-- end ja only -->
+
+
+<!-- begin ja only -->
+<p>
+入力の終わりは，ひとつの空白で区切られたふたつの0から成る行によって示される．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットに対し，それに記述されている横長整長方形より大きい最小の横長整長方形の高さ<i>h</i>と幅<i>w</i> (&gt; <i>h</i>) とを，整数でひとつの空白文字で区切って1行に出力せよ．出力にはこれら以外の文字があってはならない．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+なお，この問題の入力で与えられる横長整長方形に対しては，それより大きい最小の横長整長方形の高さと幅はともに150を超えないことが分かっている．
+</p>
+<p>
+また，この問題では横長整長方形の大小を決めるために対角線の長さの大小比較を用いているが，これは対角線の長さの二乗の大小比較を用いても同じことであ
+る．対角線の長さの二乗の大小比較を用いることにより，浮動小数点計算の誤差によって生じうるトラブルを避けることができる．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>1 2
+1 3
+2 3
+1 4
+2 4
+5 6
+1 8
+4 7
+98 100
+99 100
+0 0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>1 3
+2 3
+1 4
+2 4
+3 4
+1 8
+4 7
+2 8
+3 140
+89 109
+</pre>
+</div>
+<div align="right">(End of Problem A) <a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+</div>
+<a name="section_B"></a><h2>Problem B</h2>
+<!-- begin ja only -->
+<h3><u>ICPCの順位付け</u></h3>
+<!-- end ja only -->
+
+<div>   <!-- please enclose each h3 level section with div -->
+
+<p>
+<!-- begin ja only -->
+ICPC (International Collegiate Programming Contest) の解答提出のログが与えられたとき，
+各チームの順位を決定するプログラムを書きなさい．
+<!-- end ja only -->
+</p>
+
+<p>
+<!-- begin ja only -->
+ログはプログラム提出の記録を提出順に並べたものである．
+一つの記録は，経過時間，チーム番号，問題番号，判定結果，
+の四つの情報からなる．
+経過時間は，コンテスト開始から提出までに要した時間を意味する．
+判定結果は，プログラムが正解を出したか否か，
+また不正解だった場合の間違いの種類を表す．
+<!-- end ja only -->
+</p>
+
+<p>
+<!-- begin ja only -->
+チームの順位は，次に示す規則に従って決められる．
+なお，この規則は，本物のICPCで使われている規則から
+一部の細則を削除して簡単化したものである．
+<!-- end ja only -->
+</p>
+
+<ol>
+<li>
+<!-- begin ja only -->
+より多くの問題に正解したチームを上位とする．
+<!-- end ja only -->
+</li>
+
+<li>
+<!-- begin ja only -->
+正解した問題数が同じ場合は，所要時間合計の少ないチームを上位とする．
+<!-- end ja only -->
+</li>
+
+<li>
+<!-- begin ja only -->
+複数のチームが同数の問題に正解し，所要時間合計も同じなら，それらのチームを同順位とする．
+<!-- end ja only -->
+</li>
+
+</ol>
+
+<p>
+<!-- begin ja only -->
+所要時間合計とは，正解した問題それぞれの所要時間の合計である．
+問題の所要時間とは，その問題に正解したプログラム提出の経過時間に，それ以前に提出された同じ問題に対する不正解一つにつき20分ずつのペナルティを加えたものである．
+<!-- end ja only -->
+</p>
+
+<p>
+<!-- begin ja only -->
+正解に達しなかった問題の所要時間はゼロと見なされ，不正解がいくつあったとしても，ペナルティは発生しない．
+<!-- end ja only -->
+</p>
+
+<p>
+<!-- begin ja only -->
+ある問題に正解した後に，
+同じ問題に対するプログラムを提出することはないと仮定してよい．
+<!-- end ja only -->
+</p>
+
+</div>
+
+<h3>Input</h3>
+
+<div>
+
+<p>
+<!-- begin ja only -->
+入力は，次の形式のデータセットの集まりである．
+最後のデータセットの直後には，四つのゼロからなる行がある．
+<!-- end ja only -->
+</p>
+
+<blockquote>
+<i>M</i> <i>T</i> <i>P</i> <i>R</i> <br>
+<i>m</i><sub>1</sub> <i>t</i><sub>1</sub> <i>p</i><sub>1</sub> <i>j</i><sub>1</sub> <br>
+<i>m</i><sub>2</sub> <i>t</i><sub>2</sub> <i>p</i><sub>2</sub> <i>j</i><sub>2</sub> <br>
+..... <br>
+<i>m<sub>R</sub></i> <i>t<sub>R</sub></i> <i>p<sub>R</sub></i> <i>j<sub>R</sub></i> <br>
+</blockquote>
+
+<p>
+<!-- begin ja only -->
+データセットの最初の行には，<i>M</i>，<i>T</i>，<i>P</i>，<i>R</i>の
+四つの整数が与えられる．
+<i>M</i>は，コンテストの始まりから終わりまでの時間である．
+<i>T</i>は，チーム数である．
+<i>P</i>は，問題数である．
+<i>R</i>は，提出記録の数である．
+これらの値に関して，
+120&nbsp;≤&nbsp;<i>M</i>&nbsp;≤&nbsp;300，
+1&nbsp;≤&nbsp;<i>T</i>&nbsp;≤&nbsp;50，
+1&nbsp;≤&nbsp;<i>P</i>&nbsp;≤&nbsp;10，
+0&nbsp;≤&nbsp;<i>R</i>&nbsp;≤&nbsp;2000
+が成り立つ．
+各チームには1から<i>T</i>までのチーム番号が与えられ，
+各問題には1から<i>P</i>までの問題番号が与えられている．
+<!-- end ja only -->
+</p>
+
+<p>
+<!-- begin ja only -->
+2行目からの<i>R</i>行に，1行一つの形式で提出記録が与えられる．
+各提出記録の記述は，
+<i>m<sub>k</sub></i>，<i>t<sub>k</sub></i>，
+<i>p<sub>k</sub></i>， <i>j<sub>k</sub></i>
+の四つの整数からなる（1&nbsp;≤&nbsp;<i>k</i>&nbsp;≤&nbsp;<i>R</i>）．
+<i>m<sub>k</sub></i>は，経過時間である．
+<i>t<sub>k</sub></i>は，チーム番号である．
+<i>p<sub>k</sub></i>は，問題番号である．
+<i>j<sub>k</sub></i>は，判定結果を表す（0なら正解，0以外なら不正解）．
+これらの値に関して，
+0&nbsp;≤&nbsp;<i>m<sub>k</sub></i>&nbsp;≤&nbsp;<i>M</i>−1，
+1&nbsp;≤&nbsp;<i>t<sub>k</sub></i>&nbsp;≤&nbsp;<i>T</i>，
+1&nbsp;≤&nbsp;<i>p<sub>k</sub></i>&nbsp;≤&nbsp;<i>P</i>，
+0&nbsp;≤&nbsp;<i>j<sub>k</sub></i>&nbsp;≤&nbsp;10
+が成り立つ．
+<!-- end ja only -->
+</p>
+
+<p>
+<!-- begin ja only -->
+経過時間は分単位に切り捨てられている．
+<!-- end ja only -->
+</p>
+
+<p>
+<!-- begin ja only -->
+提出記録は，提出された順番に従って与えられる．
+したがって，<i>i</i>&nbsp;&lt;&nbsp;<i>j</i>なら，
+<i>i</i>番の提出は<i>j</i>番の提出より先に行われたものである
+（<i>m<sub>i</sub></i>&nbsp;≤&nbsp;<i>m<sub>j</sub></i>）．
+このことを利用すると，二つのチームの所要時間合計の分未満の差の正負を
+推定できる場合があるが，
+このような情報を順位決定に利用することはない．
+各チームの順位は，分単位の時間情報だけに基づいて決める．
+<!-- end ja only -->
+</p>
+
+</div>
+
+<h3>Output</h3>
+
+<div>
+
+<p>
+<!-- begin ja only -->
+各データセットに対して，1から<i>T</i>までのチーム番号を
+上位から順に1行に並べて出力しなさい．
+チーム番号間の区切り記号はコンマとする．
+ただし，同順位のチームの間の区切り記号はイコールとする．
+同順位のチームは，チーム番号の大きいものから順に（降順に）並べること．
+<!-- end ja only -->
+</p>
+
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>300 10 8 5
+50 5 2 1
+70 5 2 0
+75 1 1 0
+100 3 1 0
+150 3 2 0
+240 5 5 7
+50 1 1 0
+60 2 2 0
+70 2 3 0
+90 1 3 0
+120 3 5 0
+140 4 1 0
+150 2 4 1
+180 3 5 4
+15 2 2 1
+20 2 2 1
+25 2 2 0
+60 1 1 0
+120 5 5 4
+15 5 4 1
+20 5 4 0
+40 1 1 0
+40 2 2 0
+120 2 3 4
+30 1 1 0
+40 2 1 0
+50 2 2 0
+60 1 2 0
+120 3 3 2
+0 1 1 0
+1 2 2 0
+300 5 8 0
+0 0 0 0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>3,1,5,10=9=8=7=6=4=2
+2,1,3,4,5
+1,2,3
+5=2=1,4=3
+2=1
+1,2,3
+5=4=3=2=1
+</pre>
+</div>
+<div align="right">(End of Problem B) <a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+</div>
+<a name="section_C"></a><h2>Problem C</h2>
+
+
+<!-- begin ja only -->
+<h3><u>階層民主主義</u></h3>
+<!-- end ja only -->
+
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+デモクラティア共和国の大統領は，以下のような複数段階の選挙により選ばれる．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<ol>
+<li>大統領選挙の候補者は2名である．</li>
+<li>第1段階の選挙では，有権者は選挙区ごとに投票する．有権者の過半数の票を得た候補者がその選挙区の勝者となる．有権者が投票するのはこの第1段階だけである．</li>
+<li>第<i>k</i>段階 (<i>k</i> &gt; 1) の選挙区は，複数の第<i>k</i> − 1段階の選挙区を含む．一方，第<i>k</i> − 1段階の各選挙区は，ちょうど一つの第<i>k</i>段階の選挙区に含まれる．そして，第<i>k</i>段階の選挙区の勝者は，この選挙区に含まれる第<i>k</i> − 1段階の選挙区のうち過半数で勝った候補者である．</li>
+<li>最終段階の選挙区は全国区であり一つしかない．ここでの勝者が大統領に選ばれる．</li>
+</ol>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+この国の大統領選挙では，以下の仮定が成り立つ．
+</p>
+<ul>
+<li>すべての有権者が，それぞれ一票を投じる．</li>
+<li>第1段階の各選挙区の有権者数は奇数である．</li>
+<li>第<i>k</i>段階 (<i>k</i> &gt;1) の各選挙区に含まれる第<i>k</i> − 1段階の選挙区の数も奇数である．</li>
+</ul>
+<p>
+したがって，すべての段階のすべての選挙区で，必ずどちらかの候補が勝つ
+(引き分けはない)．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+あなたの仕事は，なるべく少ない得票数で大統領選挙に勝つ方法を求めるプログラムを作成することである．
+たとえば，最終段階の選挙区がちょうど三つの第1段階の選挙区を含んでおり，これらの第1段階の選挙区の有権者数がそれぞれ123名，4567名，89名だったとする．
+この場合，最初の選挙区で62票，3番目の選挙区で45票の計107票を獲得するのが，最も少ない得票数で勝つ方法になる．
+この場合，仮にもう一人の候補が2番目の選挙区で4567票すべてを獲得したとしても，敗者となることは避けられない．
+不公平な選挙制度だと思うかもしれないが，これも現実として受け止めて欲しい．
+</p>
+<!-- end ja only -->
+
+
+</div>
+
+<h3>Input</h3>
+
+<div>
+
+<!-- begin ja only -->
+<p>入力全体は以下の形式をしている．</p>
+
+<blockquote>
+データセット数(=<i>n</i>)       <br>
+データセット1の記述               <br>
+データセット2の記述               <br>
+…                               <br>
+データセット<i>n</i>の記述      <br>
+</blockquote>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+データセット数<i>n</i>は100以下である．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+各選挙区の有権者数と選挙区同士の関係を次のような書式で記す．
+</p>
+<ul>
+  <li>第1段階の各選挙区は，[<i>c</i>]と記す．ただし，<i>c</i>はその選挙区の有権者数である．</li>
+  <li>第<i>k</i>段階(<i>k</i> &gt; 1)の各選挙区は，[<i>d</i><sub>1</sub><i>d</i><sub>2</sub>…<i>d<sub>m</sub></i>]と記す．ただし，<i>d</i><sub>1</sub>, <i>d</i><sub>2</sub>, …, <i>d<sub>m</sub></i>は，この選挙区に含まれる第<i>k</i> − 1段階の各選挙区をこの書式にしたがって記したものである．</li>
+</ul>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+たとえば，有権者数123名の第1段階の選挙区は，[123]と記される．
+また，有権者数がそれぞれ123名，4567名，89名の三つの第1段階の選挙区を含む第2段階の選挙区は，[[123][4567][89]]と記される．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+各データセットは1行であり，この行は，最終段階の選挙区を上の書式で記した文字列よりなる．
+この問題を解くにあたり，次のように仮定して良い．
+</p>
+<ul>
+  <li>各データセットの文字列は数字('0', '1', …, '9')と角括弧('[', ']')以外の文字を含まず，その長さは11以上10000以下である．</li>
+  <li>第1段階の各選挙区の有権者数は3名以上9999名以下である．</li>
+</ul>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+ステージの段数は国全体で一定である．
+したがって，たとえば，[[[9][9][9]][9][9]] は決して入力に現れない．
+また，[[[[9]]]] も現れない．
+なぜならば，第2段階以降の選挙区は，一つ前の段階の選挙区を必ず複数含むからである．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットに対し，最少得票数で大統領選挙に勝つために必要な票数を求め，それを1行に出力しなさい．
+各出力行はこの数値以外の文字を含んではならない．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>6
+[[123][4567][89]]
+[[5][3][7][3][9]]
+[[[99][59][63][85][51]][[1539][7995][467]][[51][57][79][99][3][91][59]]]
+[[[37][95][31][77][15]][[43][5][5][5][85]][[71][3][51][89][29]][[57][95][5][69][31]][[99][59][65][73][31]]]
+[[[[9][7][3]][[3][5][7]][[7][9][5]]][[[9][9][3]][[5][9][9]][[7][7][3]]][[[5][9][7]][[3][9][3]][[9][5][5]]]]
+[[8231][3721][203][3271][8843]]
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>107
+7
+175
+95
+21
+3599
+</pre>
+</div>
+
+<div align="right">(End of Problem C) <a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+</div>
+<a name="section_D"></a><h2>Problem D</h2>
+
+<!-- begin ja only -->
+<h3><u>素数洞穴</u></h3>
+<!-- end ja only -->
+
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+砂漠の中の巨大な崖の中腹に，石窟寺院が残されているのを国際調査隊が発見しました．垂直にそびえ立つ崖のちょうど真ん中あたりに，無数の洞穴が縦横にき
+れいに並んでおり，それぞれの中に仏像が残されていたのです．さらにすごいことに，いくつかの洞穴には仏教の教典が隠されていました．千年以上も前に書か
+れたと見られる教典の価値は，それこそ計り知れません．
+</p>
+<!-- end ja only -->
+<!-- begin ja only -->
+<p>
+調査隊の隊長は，できるだけ多くの教典を持ち帰ることを決めました．ただ，洞穴は崖の中ほどにあるため，簡単には入れません．唯一の方法は，あなたの体を
+ヘリコプターで吊るして1つの洞穴に入って調査をし，その洞穴から縄を使ってすぐ下にある3つの洞穴(直下の洞穴か，直下の洞穴の右または左に隣り合う洞
+穴)のどれかに降りるということを繰り返して降りてくるというものです．最後の洞穴からは長い縄を使って地面に降りることができます．
+</p>
+<!-- end ja only -->
+<!-- begin ja only -->
+<p>
+一度に何個かの洞穴を調査できるとは言うものの，どの洞穴を調査すればよいのでしょうか? 
+そんな折，数学者のメンバーが予備調査の結果から教典が隠された洞穴にはある規則性があることを見つけました．彼によれば(1)洞穴には，中央のものに1
+番，そこから図D-1のように外向きに渦を巻くように番号を付けると，(2)教典が隠されているのは図中丸で囲まれているような素数番目の洞穴(以降<b>素数洞穴</b>と呼びます)に他ならない，というのです．次回からはあなたが最初の洞穴に入ったら，素数洞穴を最も多く調査するように降りてくることができるでしょう．
+</p>
+<!-- end ja only -->
+<center>
+<img src="2013-j_files/D.png">
+<br><br>
+<!-- begin ja only -->
+図D-1: 洞穴の番号と素数洞穴
+<!-- end ja only -->
+<br>
+</center>
+<!-- begin ja only -->
+<p>
+洞穴の総数と最初に入る洞穴の番号が与えられたときに，素数洞穴をできるだけ多く調査できる降下経路を見つけるプログラムを作ってください．
+</p>
+<!-- end ja only -->
+
+
+</div>
+
+<h3>Input</h3>
+
+<div>
+<!-- begin ja only -->
+<p>
+入力は複数のデータセットからなる．1つのデータセットは整数 <i>m</i> (1 ≤ <i>m</i> ≤ 10<sup>6</sup>)と <i>n</i> (1 ≤ <i>n</i> ≤ <i>m</i>)を空白で区切った1行である．<i>m</i> は洞穴の総数を表し，<i>n</i> は最初に入る洞穴の番号を表す．最後のデータセットの次の行には2つのゼロが書かれている．
+</p>
+<!-- end ja only -->
+
+
+
+
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットについて，洞穴 <i>n</i> から始めて，最も多く素数洞穴を調査する経路について，素数洞穴の個数と経路上最後に通過した素数洞穴の番号を空白で区切って1行に出力せよ．ただし最初に入る洞穴<i>n</i>も経路上の洞穴に含める．最も多くの素数洞穴を調査する経路が複数ある場合は，最後に通過した素数洞穴の番号が最も大きい経路について出力せよ．素数洞穴を調査する経路が1つもない場合には"<code>0 0</code>"を(引用符を除いて)出力せよ．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>49 22
+46 37
+42 23
+945 561
+1081 681
+1056 452
+1042 862
+973 677
+1000000 1000000
+0 0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>0 0
+6 43
+1 23
+20 829
+18 947
+10 947
+13 947
+23 947
+534 993541
+</pre>
+</div>
+
+<div align="right">(End of Problem D) <a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+</div>
+<a name="section_E"></a><h2>Problem E</h2>
+
+<!-- begin ja only -->
+<h3><u>つながれた風船</u></h3>
+<!-- end ja only -->
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+地面上に風船があり，地面上の１つ以上の杭とロープでつながれている．
+各ロープは，風船と杭をつなぐのに十分な長さがある．
+ロープ同士は交差していない．
+図 E-1 は，そのような状況を示したものである．
+</p>
+<!-- end ja only -->
+
+<center>
+<img src="2013-j_files/E-1.png">
+<br>
+<!-- begin ja only -->
+図E-1: 地面上にある風船とロープ
+<!-- end ja only -->
+</center>
+
+
+<!-- begin ja only -->
+<p>
+今，風船が飛びはじめた．
+あなたの仕事は，風船がロープの接続を維持したまま，
+どこまで高く飛ぶことができるか答えることである．
+杭の位置は，固定されている．
+ロープの長さと，杭の位置は与えられる．
+また，ロープに重さはなく，どの方向に引っ張られたとしても，
+一直線になりうると考えてよい．
+図E-2は，図E-1の状態から風船が飛びはじめた時に，
+風船が一番高くあがった位置を表している．
+</p>
+<!-- end ja only -->
+
+<center>
+<img src="2013-j_files/E-2.png">
+<br>
+<!-- begin ja only -->
+図E-2: 風船が一番高くあがった位置
+<!-- end ja only -->
+</center>
+
+</div>
+
+<h3>Input</h3>
+
+<div>
+<!-- begin ja only -->
+<p>
+入力は複数のデータセットからなり，
+各データセットは次の形式で表される．
+</p>
+<!-- end ja only -->
+
+<blockquote>
+<i>n</i><br>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>l</i><sub>1</sub>   <br>
+...                         <br>
+<i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub> <i>l</i><sub><i>n</i></sub>   <br>
+</blockquote>
+
+
+<!-- begin ja only -->
+<p>
+データセットの最初の行は，ロープの本数を表す整数 <i>n</i> (1 ≤ <i>n</i> ≤ 10) のみからなる．
+続く <i>n</i> 行のそれぞれは，空白文字 1 個で区切られた 3 個の整数 <i>x</i><sub><i>i</i></sub>, <i>y</i><sub><i>i</i></sub>, <i>l</i><sub><i>i</i></sub> からなる．
+<i>P</i><sub><i>i</i></sub> = (<i>x</i><sub><i>i</i></sub>, <i>y</i><sub><i>i</i></sub>) は，
+<i>i</i> 番目のロープをつなぐ杭の位置を表し，
+<i>l</i><sub><i>i</i></sub> はそのロープの長さを表す．
+−100 ≤ <i>x</i><sub><i>i</i></sub> ≤ 100, 
+−100 ≤ <i>y</i><sub><i>i</i></sub> ≤ 100, 
+1 ≤ <i>l</i><sub><i>i</i></sub> ≤ 300 であると仮定してよい．
+また，風船は，最初，地面上の (0, 0) に位置している．
+風船および杭のサイズは無視してよい．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+<i>P</i><sub><i>i</i></sub>と<i>P</i><sub><i>j</i></sub> (<i>i</i> ≠ <i>j</i>) は異なる位置を表すものとする．
+また，<i>P</i><sub><i>i</i></sub>から (0, 0) への距離は，<i>l</i><sub><i>i</i></sub>−1 以下であると仮定してよい．
+このため，風船は少なくとも高さ１まで飛ぶことができる．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+図 E-1 と E-2 は，後に示す Sample Input 中の最初のデータセットに対応している．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+入力の終わりは，ゼロを一つだけ含む行で表される．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットに対して，風船が飛ぶことのできる最大の高さを 1 行で出力せよ． 答えには 0.00001 を超える誤差があってはいけない． それ以外の余計な文字を出力してはならない．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>3
+10 10 20
+10 -10 20
+-10 10 120
+1
+10 10 16
+2
+10 10 20
+10 -10 20
+2
+100 0 101
+-90 0 91
+2
+0 0 53
+30 40 102
+3
+10 10 20
+10 -10 20
+-10 -10 20
+3
+1 5 13
+5 -3 13
+-3 -3 13
+3
+98 97 168
+-82 -80 193
+-99 -96 211
+4
+90 -100 160
+-80 -80 150
+90 80 150
+80 80 245
+4
+85 -90 290
+-80 -80 220
+-85 90 145
+85 90 170
+5
+0 0 4
+3 0 5
+-3 0 5
+0 3 5
+0 -3 5
+10
+95 -93 260
+-86 96 211
+91 90 177
+-81 -80 124
+-91 91 144
+97 94 165
+-90 -86 194
+89 85 167
+-93 -80 222
+92 -84 218
+0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>17.3205081
+16.0000000
+17.3205081
+13.8011200
+53.0000000
+14.1421356
+12.0000000
+128.3928757
+94.1879092
+131.1240816
+4.0000000
+72.2251798
+</pre>
+</div>
+
+<div align="right">(End of Problem E) <a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+</div>
+<a name="section_F"></a><h2>Problem F</h2>
+
+<!-- begin ja only -->
+<h3><u>回転と書換</u></h3>
+<!-- end ja only -->
+
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+整数の列
+A: <i>A</i><sub>1</sub> <i>A</i><sub>2</sub> ... <i>A</i><sub><i>n</i></sub>
+と
+B: <i>B</i><sub>1</sub> <i>B</i><sub>2</sub> ... <i>B</i><sub><i>m</i></sub>
+および
+"<i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> → <i>y</i>"
+という形式の<b>書き換えルール</b>がいくつか与えられる．
+二つの列に対して独立に以下の変換を，任意の順序で任意回繰り返すことができる．
+</p>
+<!-- end ja only -->
+<!-- begin ja only -->
+<ul>
+<li><b>回転</b>: 先頭要素を末尾に動かす．つまり，列 <i>c</i><sub>1</sub> <i>c</i><sub>2</sub> ... <i>c</i><sub><i>p</i></sub> を
+<i>c</i><sub>2</sub> ... <i>c</i><sub><i>p</i></sub> <i>c</i><sub>1</sub> にする．
+</li>
+<li><b>書換</b>: 与えられた書き換えルールに "<i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> → <i>y</i>"
+があるときに，
+列
+<i>c</i><sub>1</sub> <i>c</i><sub>2</sub> ... <i>c</i><sub><i>i</i></sub> <i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> <i>d</i><sub>1</sub> <i>d</i><sub>2</sub> ... <i>d</i><sub><i>j</i></sub>
+を
+<i>c</i><sub>1</sub> <i>c</i><sub>2</sub> ... <i>c</i><sub><i>i</i></sub> <i>y</i> <i>d</i><sub>1</sub> <i>d</i><sub>2</sub> ... <i>d</i><sub><i>j</i></sub>
+にする．
+</li>
+</ul>
+<!-- end ja only -->
+<!-- begin ja only -->
+<p>
+これらの操作を繰り返すことで，A と B を全く同じ列に変形することができるかどうか判定せよ．
+できる場合は，そのような変形を施した後の列のうちで最長の列の長さを答えよ．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Input</h3>
+
+<div>
+
+<!-- begin ja only -->
+<p>入力は複数のデータセットからなり，各データセットは以下の形をしている．</p>
+<!-- end ja only -->
+
+<blockquote>
+<i>n m r</i> <br>
+<i>A</i><sub>1</sub> <i>A</i><sub>2</sub> ... <i>A</i><sub><i>n</i></sub><br>
+<i>B</i><sub>1</sub> <i>B</i><sub>2</sub> ... <i>B</i><sub><i>m</i></sub><br>
+<i>R</i><sub>1</sub><br>
+...<br>
+<i>R</i><sub><i>r</i></sub><br>
+</blockquote>
+
+
+<!-- begin ja only -->
+<p>
+データセットの最初の行は三つの正整数 <i>n</i>, <i>m</i>, <i>r</i> からなり，
+<i>n</i> (<i>n</i> ≤ 25) は列 A の長さ，
+<i>m</i> (<i>m</i> ≤ 25) は列 B の長さ，
+<i>r</i> (<i>r</i> ≤ 60) は書き換えルールの個数を表す．
+次の行には <i>n</i> 個の整数があり，これが列 A の <i>n</i> 個の要素を表す．
+その次の行には <i>m</i> 個の整数があり，これが列 B の <i>m</i> 個の要素を表す．
+その次には <i>r</i> 行が以下の形式で続く．各行が一つの書き換えルールに対応する．
+</p>
+<!-- end ja only -->
+
+<blockquote>
+<i>k</i> <i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> <i>y</i><br>
+</blockquote>
+
+
+<!-- begin ja only -->
+<p>
+最初の整数 <i>k</i> (2 ≤ <i>k</i> ≤ 10) はルールの左辺の長さである．
+次に来る <i>k</i> 個の整数 <i>x</i><sub>1</sub> <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> はルールの左辺を表す．
+最後に来る整数 <i>y</i> はルールの右辺を表す．
+</p>
+<p>
+<i>A</i><sub>1</sub>, .., <i>A</i><sub><i>n</i></sub>, <i>B</i><sub>1</sub>, ..., <i>B</i><sub><i>m</i></sub>, <i>x</i><sub>1</sub>, ..., <i>x</i><sub><i>k</i></sub>, <i>y</i>
+はすべて 1 以上 30 以下である．
+</p>
+<!-- end ja only -->
+
+
+<!-- begin ja only -->
+<p>"0 0 0" と書かれた行が入力の終わりを示す．</p>
+<!-- end ja only -->
+
+
+
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットについて， 同じ列に変形できる場合は，
+そのような変換を施した後の列のうちで最長のものの長さを出力せよ． 
+同じ列に変形できない場合は，<code>-1</code> を出力すること．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>3 3 3
+1 2 3
+4 5 6
+2 1 2 5
+2 6 4 3
+2 5 3 1
+3 3 2
+1 1 1
+2 2 1
+2 1 1 2
+2 2 2 1
+7 1 2
+1 1 2 1 4 1 2
+4
+3 1 4 1 4
+3 2 4 2 4
+16 14 5
+2 1 2 2 1 3 2 1 3 2 2 1 1 3 1 2
+2 1 3 1 1 2 3 1 2 2 2 2 1 3
+2 3 1 3
+3 2 2 2 1
+3 2 2 1 2
+3 1 2 2 2
+4 2 1 2 2 2
+0 0 0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>2
+-1
+1
+9
+</pre>
+
+</div>
+
+<div align="right">(End of Problem F) <a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+</div>
+ </td>                     
+</tr>                      
+</tbody></table>                   
+
+
+    </div>
+  </div>
+
+ </div>
+</div>
+
+
+</body></html>

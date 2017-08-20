@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>(日本語) 3分でわかるICPC | ACM-ICPC 国際大学対抗プログラミングコンテスト</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://icpc.iisf.or.jp/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://icpc.iisf.or.jp/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="ACM-ICPC 国際大学対抗プログラミングコンテスト &raquo; Feed" href="http://icpc.iisf.or.jp/feed/?lang=en" />
+<link rel="alternate" type="application/rss+xml" title="ACM-ICPC 国際大学対抗プログラミングコンテスト &raquo; Comments Feed" href="http://icpc.iisf.or.jp/comments/feed/?lang=en" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/icpc.iisf.or.jp\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b===c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='http://icpc.iisf.or.jp/wp-content/themes/icpc-iisf/style.css?ver=4.8' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://icpc.iisf.or.jp/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<!-- This site uses the Google Analytics by MonsterInsights plugin v6.2.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	var disableStr = 'ga-disable-UA-51402415-1';
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-51402415-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+<script type='text/javascript' src='http://icpc.iisf.or.jp/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://icpc.iisf.or.jp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://icpc.iisf.or.jp/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://icpc.iisf.or.jp/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://icpc.iisf.or.jp/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.8" />
+<link rel="canonical" href="http://icpc.iisf.or.jp/acm-icpc/3min/?lang=en" />
+<link rel='shortlink' href='http://icpc.iisf.or.jp/?p=1947' />
+<link rel="alternate" type="application/json+oembed" href="http://icpc.iisf.or.jp/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ficpc.iisf.or.jp%2Facm-icpc%2F3min%2F%3Flang%3Den" />
+<link rel="alternate" type="text/xml+oembed" href="http://icpc.iisf.or.jp/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ficpc.iisf.or.jp%2Facm-icpc%2F3min%2F%3Flang%3Den&#038;format=xml" />
+<style type="text/css">
+.qtranxs_flag_ja {background-image: url(http://icpc.iisf.or.jp/wp-content/plugins/qtranslate/flags/jp.png); background-repeat: no-repeat;}
+.qtranxs_flag_en {background-image: url(http://icpc.iisf.or.jp/wp-content/plugins/qtranslate/flags/us.png); background-repeat: no-repeat;}
+</style>
+<link hreflang="ja" href="http://icpc.iisf.or.jp/acm-icpc/3min/?lang=ja" rel="alternate" />
+<link hreflang="en" href="http://icpc.iisf.or.jp/acm-icpc/3min/?lang=en" rel="alternate" />
+<link hreflang="x-default" href="http://icpc.iisf.or.jp/acm-icpc/3min/" rel="alternate" />
+<meta name="generator" content="qTranslate-X 3.4.6.8" />
+
+<link rel="stylesheet" href="http://icpc.iisf.or.jp/wp-content/plugins/wassup/css/wassup-widget.css?ver=1.9.3" type="text/css" />
+<!-- BEGIN recaptcha, injected by plugin wp-recaptcha-integration  -->
+
+<!-- END recaptcha -->
+<!-- BEGIN: WP Social Bookmarking Light -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<style type="text/css">
+.wp_social_bookmarking_light{
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.wp_social_bookmarking_light div{
+    float: left !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 5px 0px 0 !important;
+    height: 23px !important;
+    text-indent: 0 !important;
+}
+.wp_social_bookmarking_light img{
+    border: 0 !important;
+    padding: 0;
+    margin: 0;
+    vertical-align: top !important;
+}
+.wp_social_bookmarking_light_clear{
+    clear: both !important;
+}
+.wsbl_twitter{
+    width: 100px;
+}</style>
+<!-- END: WP Social Bookmarking Light -->
+
+<script type="text/javascript">
+//<![CDATA[
+	var screen_res=screen.width+" x "+screen.height;
+	if(screen_res==" x ") screen_res=window.screen.width+" x "+window.screen.height;
+	if(screen_res==" x ") screen_res=screen.availWidth+" x "+screen.availHeight;
+	if(screen_res!=" x "){document.cookie = "wassup_screen_resbce9680511b7c3bfbf377705ef366f00=" + encodeURIComponent(screen_res)+ "; path=/; domain=";}
+//]]>
+</script></head>
+
+<body class="page-template-default page page-id-1947 page-child parent-pageid-11 custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="http://icpc.iisf.or.jp/" title="ACM-ICPC 国際大学対抗プログラミングコンテスト" rel="home">ACM-ICPC 国際大学対抗プログラミングコンテスト</a></h1>
+			<h2 class="site-description"></h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-top-container"><ul id="menu-top" class="nav-menu"><li id="menu-item-1915" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1915"><a href="http://icpc.iisf.or.jp/2017-tsukuba/?lang=en">2016Tsukuba</a>
+<ul  class="sub-menu">
+	<li id="menu-item-2222" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2222"><a href="http://icpc.iisf.or.jp/2017-tsukuba/domestic/?lang=en">National On-Line First Round Contest</a></li>
+	<li id="menu-item-2251" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2251"><a href="http://icpc.iisf.or.jp/2017-tsukuba/regional/?lang=en">Tsukuba Regional</a></li>
+</ul>
+</li>
+<li id="menu-item-576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-576"><a href="http://icpc.iisf.or.jp/past/?lang=en">Past Regionals</a></li>
+<li id="menu-item-312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-312"><a href="http://icpc.iisf.or.jp/about/?lang=en">About us</a></li>
+<li id="menu-item-1608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1608"><a href="http://icpc.iisf.or.jp/supporting/?lang=en">Call for Sponsors</a></li>
+<li id="menu-item-1935" class="qtranxs-lang-menu qtranxs-lang-menu-en menu-item menu-item-type-custom menu-item-object-custom current-menu-parent menu-item-has-children menu-item-1935"><a title="English" href="#">Language:&nbsp;<img src="http://icpc.iisf.or.jp/wp-content/plugins/qtranslate/flags/us.png" alt="English" /></a>
+<ul  class="sub-menu">
+	<li id="menu-item-2252" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-ja menu-item menu-item-type-custom menu-item-object-custom menu-item-2252"><a href="http://icpc.iisf.or.jp/acm-icpc/3min/?lang=ja" onclick="__gaTracker('send', 'event', 'outbound-menu', 'http://icpc.iisf.or.jp/acm-icpc/3min/?lang=ja', '&nbsp;日本語');" title="日本語"><img src="http://icpc.iisf.or.jp/wp-content/plugins/qtranslate/flags/jp.png" alt="日本語" />&nbsp;日本語</a></li>
+	<li id="menu-item-2253" class="qtranxs-lang-menu-item qtranxs-lang-menu-item-en menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-2253"><a href="http://icpc.iisf.or.jp/acm-icpc/3min/?lang=en" onclick="__gaTracker('send', 'event', 'outbound-menu', 'http://icpc.iisf.or.jp/acm-icpc/3min/?lang=en', '&nbsp;English');" title="English"><img src="http://icpc.iisf.or.jp/wp-content/plugins/qtranslate/flags/us.png" alt="English" />&nbsp;English</a></li>
+</ul>
+</li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+							
+	<article id="post-1947" class="post-1947 page type-page status-publish hentry">
+		<header class="entry-header">
+												<h1 class="entry-title">(日本語) 3分でわかるICPC</h1>
+		</header>
+
+		<div class="entry-content">
+			<div class='wp_social_bookmarking_light'><div class="wsbl_twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://icpc.iisf.or.jp/acm-icpc/3min/?lang=en" data-text="(日本語) 3分でわかるICPC" data-lang="en">Tweet</a></div><div class="wsbl_facebook_like"><div id="fb-root"></div><fb:like href="http://icpc.iisf.or.jp/acm-icpc/3min/?lang=en" layout="button_count" action="like" width="100" share="false" show_faces="false" ></fb:like></div><div class="wsbl_google_plus_one"><g:plusone size="medium" annotation="none" href="http://icpc.iisf.or.jp/acm-icpc/3min/?lang=en" ></g:plusone></div></div><br class='wp_social_bookmarking_light_clear' /><p class="qtranxs-available-languages-message qtranxs-available-languages-message-en">Sorry, this entry is only available in <a href="http://icpc.iisf.or.jp/acm-icpc/3min/?lang=ja" class="qtranxs-available-language-link qtranxs-available-language-link-ja" title="日本語">Japanese</a>.</p>
+					</div><!-- .entry-content -->
+		<footer class="entry-meta">
+					</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-4" class="widget widget_text"><h3 class="widget-title">最近のアジア地区予選大会</h3>			<div class="textwidget"><p><a href="/2017-tsukuba/"><img class="flat" src="http://icpc.iisf.or.jp/wp-content/uploads/2017/06/cropped-icpc2017_akihiro.png" alt="2017 Asia Tsukuba Regional"></a><br />
+<a href="/2016-tsukuba/"><img class="flat" src="/wp-content/uploads/2016/04/icpc_banner2016.png" alt="2016 Asia Tsukuba Regional"></a><br />
+<a href="/2015-tsukuba/"><img class="flat" src="/wp-content/uploads/2014/12/スクリーンショット-2014-12-09-23.03.37.png" alt="2015 Asia Tsukuba Regional"></a><br />
+<a href="/2014-waseda/"><img width="50" class="flat" src="/wp-content/uploads/2014/03/symbol_waseda_tenkai_1.gif">2014 Asia Tokyo Regional</a></p>
+</div>
+		</aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">関連組織</h3>			<div class="textwidget"><p><a href="http://www.iisf.or.jp" title="情報科学国際交流財団"><img src="/wp-content/uploads/2014/01/iisf.png"></a><br />
+<a href="http://icpc.baylor.edu" title="世界大会"><img src="https://icpc.baylor.edu/cms/welcome-banner-2014/2017FinalsRollerv1.jpg" width=250></a><br />
+<a href="http://acm-icpc.aitea.net/" title="ACM-ICPC OB/OGの会"><img src="/wp-content/uploads/2014/01/icpcobog.png" class="flat"> </a><br />
+<a href="http://blog.sina.com.cn/cjhwang">Prof. C. J. Hwang</a> (アジア地区ルールなど)<br />
+<a href="http://sites.google.com/site/icpcjapan/">実行支援委員会</a> (教員コーチの有志)</p>
+</div>
+		</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://icpc.iisf.or.jp/blog/2016/08/05/tsukuba-regional/?lang=en">2016 Asia Tsukuba Regional</a>
+						</li>
+					<li>
+				<a href="http://icpc.iisf.or.jp/blog/2015/09/10/asia-tsukuba-regional/?lang=en">2015 Tsukuba Regional</a>
+						</li>
+					<li>
+				<a href="http://icpc.iisf.or.jp/blog/2015/03/27/2015-domestic/?lang=en">Date of Domestic Preliminary Contest, 2015</a>
+						</li>
+					<li>
+				<a href="http://icpc.iisf.or.jp/blog/2015/02/20/world-fnals-2015/?lang=en">2015年世界大会</a>
+						</li>
+					<li>
+				<a href="http://icpc.iisf.or.jp/blog/2014/12/09/2015-tsukuba/?lang=en">2015年国際大学対抗プログラミングコンテスト（ACM-ICPC）アジア地区大会のつくば開催について</a>
+						</li>
+				</ul>
+		</aside>		<aside id="text-8" class="widget widget_text"><h3 class="widget-title">Twitter</h3>			<div class="textwidget"><a href="https://twitter.com/icpc_tokyo2014" onclick="__gaTracker('send', 'event', 'outbound-widget', 'https://twitter.com/icpc_tokyo2014', 'Tweets by @icpc_tokyo2014');" class="twitter-timeline"  data-widget-id="321428608730144768">Tweets by @icpc_tokyo2014</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='http://icpc.iisf.or.jp/blog/2017/06/?lang=en'>June 2017</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2017/05/?lang=en'>May 2017</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2017/01/?lang=en'>January 2017</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2016/08/?lang=en'>August 2016</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2016/05/?lang=en'>May 2016</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2016/04/?lang=en'>April 2016</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2015/12/?lang=en'>December 2015</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2015/11/?lang=en'>November 2015</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2015/09/?lang=en'>September 2015</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2015/06/?lang=en'>June 2015</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2015/05/?lang=en'>May 2015</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2015/03/?lang=en'>March 2015</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2015/02/?lang=en'>February 2015</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2014/12/?lang=en'>December 2014</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2014/11/?lang=en'>November 2014</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2014/10/?lang=en'>October 2014</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2014/07/?lang=en'>July 2014</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2014/06/?lang=en'>June 2014</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2014/04/?lang=en'>April 2014</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2014/03/?lang=en'>March 2014</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2014/01/?lang=en'>January 2014</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2013/12/?lang=en'>December 2013</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2013/11/?lang=en'>November 2013</a></li>
+	<li><a href='http://icpc.iisf.or.jp/blog/2013/10/?lang=en'>October 2013</a></li>
+		</ul>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://icpc.iisf.or.jp/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-6"><a href="http://icpc.iisf.or.jp/blog/category/%e5%8d%94%e8%b3%9b%e4%bc%81%e6%a5%ad%e3%81%8b%e3%82%89%e3%81%ae%e5%bf%9c%e6%8f%b4%e3%83%a1%e3%83%83%e3%82%bb%e3%83%bc%e3%82%b8/?lang=en" >協賛企業からの応援メッセージ</a> (6)
+</li>
+	<li class="cat-item cat-item-5"><a href="http://icpc.iisf.or.jp/blog/category/%e5%90%84%e5%a4%a7%e5%ad%a6%e3%81%ae%e5%8f%96%e3%82%8a%e7%b5%84%e3%81%bf/?lang=en" >各大学の取り組み</a> (3)
+</li>
+	<li class="cat-item cat-item-4"><a href="http://icpc.iisf.or.jp/blog/category/%e6%97%a5%e6%9c%ac%e4%b8%bb%e5%82%ac%e3%81%ae%e5%a4%a7%e4%bc%9a/?lang=en" >日本主催の大会</a> (28)
+</li>
+	<li class="cat-item cat-item-3"><a href="http://icpc.iisf.or.jp/blog/category/%e6%b5%b7%e5%a4%96%e6%b4%be%e9%81%a3/?lang=en" >海外派遣</a> (19)
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://icpc.iisf.or.jp/wp-login.php">Log in</a></li>
+			<li><a href="http://icpc.iisf.or.jp/feed/?lang=en">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://icpc.iisf.or.jp/comments/feed/?lang=en">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+<!-- <p class="small"> WassUp 1.9.3 timestamp: 2017-07-18 09:51:37AM UTC (06:51PM)<br />
+If above timestamp is not current time, this page is cached.</p> -->
+
+<!-- BEGIN recaptcha, injected by plugin wp-recaptcha-integration  -->
+<script type="text/javascript">
+		var recaptcha_widgets={};
+		function wp_recaptchaLoadCallback(){ 
+			try {
+				grecaptcha;
+			} catch(err){
+				return;
+			}
+			var e = document.querySelectorAll ? document.querySelectorAll('.g-recaptcha:not(.wpcf7-form-control)') : document.getElementsByClassName('g-recaptcha'),
+				form_submits;
+
+			for (var i=0;i<e.length;i++) {
+				(function(el){
+					var wid;
+					// check if captcha element is unrendered
+					if ( ! el.childNodes.length) {
+						wid = grecaptcha.render(el,{
+							'sitekey':'6Lf7mggTAAAAADa-RVEyJehejxDPC8kJU4xhp2Ii',
+							'theme':el.getAttribute('data-theme') || 'light'
+						});
+						el.setAttribute('data-widget-id',wid);
+					} else {
+						wid = el.getAttribute('data-widget-id');
+						grecaptcha.reset(wid);
+					}
+				})(e[i]);
+			}
+		}
+		
+		// if jquery present re-render jquery/ajax loaded captcha elements 
+		if ( typeof jQuery !== 'undefined' )
+			jQuery(document).ajaxComplete( function(evt,xhr,set){
+				if( xhr.responseText && xhr.responseText.indexOf('6Lf7mggTAAAAADa-RVEyJehejxDPC8kJU4xhp2Ii') !== -1)
+					wp_recaptchaLoadCallback();
+			} );
+		
+		</script><script src="https://www.google.com/recaptcha/api.js?onload=wp_recaptchaLoadCallback&#038;render=explicit" async defer></script>
+<!-- END recaptcha -->
+<!-- BEGIN: WP Social Bookmarking Light -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script src="https://apis.google.com/js/platform.js" async defer>{lang: "en-US"}</script>
+<!-- END: WP Social Bookmarking Light -->
+<script type='text/javascript' src='http://icpc.iisf.or.jp/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='http://icpc.iisf.or.jp/wp-includes/js/wp-embed.min.js?ver=4.8'></script>
+</body>
+</html>

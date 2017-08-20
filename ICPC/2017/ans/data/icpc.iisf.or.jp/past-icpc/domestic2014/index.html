@@ -1,0 +1,1164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja"><head>
+<link rel="STYLESHEET" href="All%20Problems_files/icpc.css" type="text/css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+
+<title>All Problems</title>
+</head>
+
+<body>
+
+<table class="main">
+<!-- ------------ 1st row ---------------- -->
+<!-- |        ACM Inter Collegiate Programming Contest       | -->
+<tbody><tr>
+ <td colspan="2" align="center">
+  
+<h1><img src="All%20Problems_files/icpc_logo.png" alt="acm International Collegiate Programming Contest"></h1>
+<div class="banner" align="right"><font size="-1">
+<i>2014/7/11 Tokyo</i></font></div> </td>
+</tr>
+
+<!-- ------------ 2nd row ---------------- -->
+<!-- menu in the 1st column. empty in the 2nd. -->
+<tr>
+ <td class="menu" rowspan="4" nowrap="nowrap" valign="top">
+  </td>
+ <td>
+  </td>
+</tr>
+
+<!-- ------------ 3rd row ---------------- -->
+<!-- no 1st column. empty in the 2nd. -->
+<tr>
+ <td>
+  </td>
+</tr>
+
+<!-- ------------ 4th row ------------ -->
+<!-- nothing in the 1st column. everything else in the 2nd -->
+<tr>
+ <td class="main">
+   <h2>Links</h2><div><a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+<a href="#section_G">G</a>
+</div>
+<a name="section_A"><h2>Problem A</h2>
+<!-- begin ja only -->
+<h3><u>税率変更</u></h3>
+<!-- end ja only -->
+
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+  <p>
+    消費税は売価に比例した定率を課す税である．
+  </p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+  <p>
+    私たちの店では，以下のルールによって税込価格を計算する．
+    </p><ul>
+      <li>
+	消費税率が <i>x</i>% のとき，
+	税抜価格が <i>p</i> 円である商品の税込価格は，
+	<i>p</i>&nbsp;(100+<i>x</i>)&nbsp;/&nbsp;100&nbsp;&nbsp; 円を小数点以下切り捨てたものである．
+      </li>
+      <li>
+	複数の商品についてまとめて支払う際の税込合計価格は，個々の商品の税込価格の合計額とする．
+      </li>
+    </ul>
+  <p></p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+  <p>
+    消費税率はしょっちゅう変更される．
+    私たちの店の会計係は，
+    「税込合計価格が同じだった2商品の組が，消費税率の変更後に異なる税込合計価格になりうる」
+    ことに気付いた．
+    たとえば，
+    消費税率が 5% から 8% に上がると，引上げ前に税込合計価格 105 円であった2商品の税込合計金額は，
+    下表に示すとおり 107 円，108 円，109 円のいずれかとなる．
+  </p>
+<!-- end ja only -->
+  <table border="1">
+<!-- begin ja only -->
+    <tbody><tr><th>2商品の税抜価格</th><th>消費税率 5% 時の税込価格</th><th>消費税率 8% 時の税込価格</th></tr>
+<!-- end ja only -->
+    <tr><td align="center">20, 80</td><td align="center">21 + 84 = 105</td><td align="center">21 + 86 = 107</td></tr>
+    <tr><td align="center">2, 99</td><td align="center">2 + 103 = 105</td><td align="center">2 + 106 = 108</td></tr>
+    <tr><td align="center">13, 88</td><td align="center">13 + 92 = 105</td><td align="center">14 + 95 = 109</td></tr>
+  </tbody></table>
+
+<!-- begin ja only -->
+  <p>
+    会計係が消費税率変更の影響を調査している．
+    2つの商品の消費税率変更前の税込合計価格を元に，
+    新消費税率での税込合計価格が最大いくらになるかを計算するプログラムを作って欲しい．
+  </p>
+<!-- end ja only -->
+</div>
+
+<h3>Input</h3>
+
+<div>
+<!-- begin ja only -->
+  <p>
+    入力は複数のデータセットからなる．
+    各データセットは1行からなり，
+    その行は空白で区切られた3つの整数 <i>x</i>, <i>y</i>, <i>s</i> からなる．
+    <i>x</i> は変更<b>前</b>の消費税率（パーセント），
+    <i>y</i> は変更<b>後</b>の消費税率（パーセント），
+    <i>s</i> は消費税率変更<b>前</b>の 2 商品の税込合計価格である．
+    これらの整数は，0 &lt; <i>x</i> &lt; 100, 0 &lt; <i>y</i> &lt; 100,
+    10 &lt; <i>s</i> &lt; 1000，<i>x</i> ≠ <i>y</i> を満たす．
+    商品の税抜価格として 1 円から <i>s</i>-1 円のすべてを考慮に入れよ．
+  </p>
+  <p>
+    入力の終わりは，空白で区切られた3つのゼロからなる行によって示される．
+  </p>
+<!-- end ja only -->
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+  <p>
+    各データセットについて，
+    消費税率が <i>y</i>% になったときにとりうる税込合計価格の最大値を1行で出力せよ．
+  </p>
+<!-- end ja only -->
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>5 8 105
+8 5 105
+1 2 24
+99 98 24
+12 13 26
+1 22 23
+1 13 201
+13 16 112
+2 24 50
+1 82 61
+1 84 125
+1 99 999
+99 1 999
+98 99 999
+1 99 11
+99 1 12
+0 0 0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>109
+103
+24
+24
+26
+27
+225
+116
+62
+111
+230
+1972
+508
+1004
+20
+7
+</pre>
+</div>
+
+<!-- begin ja only -->
+<h3>ヒント</h3>
+<!-- end ja only -->
+<div>
+<!-- begin ja only -->
+  <p>
+    以下の表に，
+    消費税率変更後に税込価格が最大となる税抜価格の組み合わせ例を，
+    サンプル入力のデータセットごとに1つずつ示す．
+  </p>
+<!-- end ja only -->
+
+<table border="1">
+<!-- begin ja only -->
+  <tbody><tr><th>データセット</th><th>税抜価格</th><th>消費税率 <i>y</i>% 時の税込価格</th></tr>
+<!-- end ja only -->
+  <tr><td align="center">5 8 105</td>  <td align="center"> 13, 88</td><td align="center"> 14 + 95 = 109</td></tr>
+  <tr><td align="center">8 5 105</td>  <td align="center"> 12, 87</td><td align="center"> 12 + 91 = 103</td></tr>
+  <tr><td align="center">1 2 24</td>   <td align="center">  1, 23</td><td align="center">  1 + 23 =  24</td></tr>
+  <tr><td align="center">99 98 24</td> <td align="center">  1, 12</td><td align="center">  1 + 23 =  24</td></tr>
+  <tr><td align="center">12 13 26</td> <td align="center">  1, 23</td><td align="center">  1 + 25 =  26</td></tr>
+  <tr><td align="center">1 22 23</td>  <td align="center">  1, 22</td><td align="center">  1 + 26 =  27</td></tr>
+  <tr><td align="center">1 13 201</td> <td align="center">  1,199</td><td align="center">  1 +224 = 225</td></tr>
+  <tr><td align="center">13 16 112</td><td align="center"> 25, 75</td><td align="center"> 29 + 87 = 116</td></tr>
+  <tr><td align="center">2 24 50</td>  <td align="center"> 25, 25</td><td align="center"> 31 + 31 =  62</td></tr>
+  <tr><td align="center">1 82 61</td>  <td align="center"> 11, 50</td><td align="center"> 20 + 91 = 111</td></tr>
+  <tr><td align="center">1 84 125</td> <td align="center"> 50, 75</td><td align="center"> 92 +138 = 230</td></tr>
+  <tr><td align="center">1 99 999</td> <td align="center"> 92,899</td><td align="center">183+1789 =1972</td></tr>
+  <tr><td align="center">99 1 999</td> <td align="center">  1,502</td><td align="center">  1 +507 = 508</td></tr>
+  <tr><td align="center">98 99 999</td><td align="center">  5,500</td><td align="center">  9 +995 =1004</td></tr>
+  <tr><td align="center">1 99 11</td>  <td align="center">  1, 10</td><td align="center">  1 + 19 =  20</td></tr>
+  <tr><td align="center">99 1 12</td>  <td align="center">  1,  6</td><td align="center">  1 +  6 =   7</td></tr>
+</tbody></table>
+</div>
+
+<!-- Local words: td tr pre dataset datasets ACM ICPC -->
+</a><div align="right"><a name="section_A">(End of Problem A) </a><a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+<a href="#section_G">G</a>
+</div>
+<a name="section_B"><h2>Problem B</h2>
+
+<!-- begin ja only -->
+<h3><u>連鎖消滅パズル</u></h3>
+<!-- end ja only -->
+
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+皆さんはあるパズルに取り組んでいる．
+このパズルには，下図に示すような，<i>H</i> 行，5 列のセルからなる，直立した盤を使う．
+各セルには1から9までの数字が1つ刻まれた石が配置されている．
+3個以上の水平に隣り合うセルに同じ数字を彫った石があれば，これらの石は消滅する．
+石が消滅したセルの上方のセルに石があれば，それらは順次落ちて空きを埋める．
+</p>
+<!-- end ja only -->
+
+<center>
+	<img src="All%20Problems_files/B_board.png" border="0" width="300">
+</center>
+
+
+<!-- begin ja only -->
+<p>
+パズルは以下のステップに従って進行する．
+</p><ol>
+	<li>3個以上の水平に隣り合うセルに同じ数字を彫った石があれば，これらの石は消滅する．こうした石群の消滅はすべて同時に起きる．</li>
+	<li>石が消滅したセルの上方のセルに石があれば，空きを埋めるように石が落下する．</li>
+	<li>すべての石の落下完了後に，消滅の条件を満たすようになった石群があれば，ステップ1に戻って繰り返す．</li>
+</ol>
+このパズルのスコアは消滅した石の数字の合計である．
+<p></p>
+<p>
+与えられた石の配置で獲得できるスコアを計算するプログラムを作れ．
+</p>
+<!-- end ja only -->
+
+<center>
+	<img src="All%20Problems_files/B_disappear.png" border="0" width="500">
+</center>
+
+
+</div>
+
+<h3>Input</h3>
+
+<div>
+<!-- begin ja only -->
+<p>
+入力は複数のデータセットからなる．
+各データセットは以下の形をしている
+</p>
+<blockquote>
+盤面の高さ <i>H</i><br>
+行1の石の並び<br>
+行2の石の並び<br>
+...<br>
+行 <i>H</i> の石の並び<br>
+</blockquote>
+<p>
+各データセットの1行目には，パズル盤の高さ( <i>H </i> )が指定されている(1 &#8804; <i>H</i> &#8804; 10)．
+残りの <i>H</i> 行には，各行の石の並びが上から下の順に指定されている．
+石の並びは空白で区切った1から9までの5個の数字で与えられる．
+数字はその順に当該の行の5個の石に彫られている．
+</p>
+<p>
+入力の終わりは，1つのゼロからなる行で示す．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Output</h3>
+<div>
+
+<!-- begin ja only -->
+<p>
+各データセットに対して，スコアを求め1行に出力せよ．
+各出力行はスコアを表す数字以外を含んではならない．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>1
+6 9 9 9 9
+5
+5 9 5 5 9
+5 5 6 9 9
+4 6 3 6 9
+3 3 2 9 9
+2 2 1 1 1
+10
+3 5 6 5 6
+2 2 2 8 3
+6 2 5 9 2
+7 7 7 6 1
+4 6 6 4 9
+8 9 1 1 8
+5 6 1 8 1
+6 8 2 1 2
+9 6 3 3 5
+5 3 8 8 8
+5
+1 2 3 4 5
+6 7 8 9 1
+2 3 4 5 6
+7 8 9 1 2
+3 4 5 6 7
+3
+2 2 8 7 4
+6 5 7 7 7
+8 8 9 9 9
+0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>36
+38
+99
+0
+72
+</pre>
+</div>
+
+</a><div align="right"><a name="section_B">(End of Problem B) </a><a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+<a href="#section_G">G</a>
+</div>
+<a name="section_C"><h2>Problem C</h2>
+
+<!-- begin ja only -->
+<h3><u>バンパイア</u></h3>
+<!-- end ja only -->
+
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+C氏はバンパイアである．太陽の光を直接浴びると灰になってしまうのだが，昨夜，
+不死者と死人のプログラマー同好会(ICPC)に参加していたら，帰宅が夜明けに近い時間になってしまった．
+幸いなことに，C氏の自宅周辺には背の高いビルが多く，太陽の光がビルにさえぎられている間は安全に動き回ることができる．
+いま太陽の上端が地平線にかかったところだが，C氏が安全に棺桶に入るまでにあと何秒の猶予があるだろうか?
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+簡単のため，東の空を<i>x</i> 軸が水平，<i>y</i> 軸が垂直方向の2次元
+<i>x</i>-<i>y</i> 平面で表し，建物のシルエットはこの平面上の長方形，
+太陽は円で近似するものとする．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+<i>x</i> 軸が地平線を表す．時刻を<i>t</i> で表し，現在の時刻を<i>t</i>=0とする．太陽は半径 <i>r</i> で，時刻 <i>t</i>=0 における中心は
+(0, -<i>r</i>) にあり，<i>x</i>-<i>y</i>平面上を 毎秒 (0, 1) の等速直線運動を
+しているものとする．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+太陽(境界線を含む)の全体が，シルエット(境界線を含む)および地平線以下の領域(y &#8804; 0)の和集合に含まれていれば，太陽の光はさえぎられている．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+太陽の光がさえぎられている最後の瞬間の時刻を計算するプログラムを書け．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+次の図は，後に示す Sample Input 中の最初のデータセットに対応するシルエットの配置と
+太陽の光がさえぎられている最後の瞬間 (<i>t</i>=0) を示す．
+このように，時刻 <i>t</i>=0 が太陽の光がさえぎられている最後の瞬間であることもありうる．
+</p>
+<!-- end ja only -->
+
+<img src="All%20Problems_files/C_fig0.png" width="400px">
+
+<!-- begin ja only -->
+<p>
+シルエット同士が辺で接する場合も，隙間は無く太陽の光はさえぎられる．
+下の図は，Sample Input の 2番目のデータセットに対応するシルエットの配置と，
+太陽の光がさえぎられている最後の瞬間 (<i>t</i>=3) を示す．
+太陽の半径が 2で， -2 &#8804; <i>x</i> &#8804; 0 に高さ 4，0 &#8804; <i>x</i> &#8804; 2
+に高さ 3 の2つのシルエットが与えられた例である．
+</p>
+<!-- end ja only -->
+
+<img src="All%20Problems_files/C_fig1.png" width="400px">
+
+</div>
+
+<h3>Input</h3>
+
+<div>
+<!-- begin ja only -->
+<p>
+入力は複数のデータセットからなる．各データセットの最初の行は，
+空白で区切られた2つの整数 <i>r</i> と <i>n</i> からなる．
+<i>r</i> は太陽の半径を表し，<i>n</i> は建物のシルエットの個数を表す．
+(1 &#8804; <i>r</i> &#8804; 20, 0 &#8804; <i>n</i> &#8804; 20)
+</p><p>
+続く <i>n</i>行のそれぞれは，空白で区切られた 3つの整数 <i>x<sub>li</sub></i>，
+<i>x<sub>ri</sub></i>， <i>h<sub>i</sub></i> (1 &#8804; <i>i</i> &#8804; <i>n</i>)
+からなる．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+この 3つの整数は，建物のシルエットの長方形を指定する．シルエットの長方
+形は地平線に平行で，左右の辺は<i>x</i> = <i>x<sub>li</sub></i> と
+<i>x</i> = <i>x<sub>ri</sub></i> に一致し，上辺は <i>y</i> =
+<i>h<sub>i</sub></i> に，下辺は地平線に一致している．
+(-20 &#8804; <i>x<sub>li</sub></i> &lt; <i>x<sub>ri</sub></i> &#8804; 20,
+0 &lt; <i>h<sub>i</sub></i> &#8804; 20)
+</p><p>
+入力の終わりは空白で区切られた 2つのゼロからなる行で表される．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+こうして与えられる建物のシルエットは重なっているかもしれないので注意すること．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットに対し，太陽の光がさえぎられている最後の瞬間の時刻<i>t</i>を1行に出力せよ．
+答えには 0.001 を越える誤差があってはならない．
+それ以外の余計な文字を出力してはならない．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>2 3
+-2 -1 3
+0 1 3
+2 3 3
+2 2
+-2 0 4
+0 2 3
+2 6
+-3 3 1
+-2 3 2
+-1 3 3
+0 3 4
+1 3 5
+2 3 6
+2 6
+-3 3 1
+-3 2 2
+-3 1 3
+-3 0 4
+-3 -1 5
+-3 -2 6
+0 0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>0.0000
+3.0000
+2.2679
+2.2679
+</pre>
+</div>
+
+</a><div align="right"><a name="section_C">(End of Problem C) </a><a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+<a href="#section_G">G</a>
+</div>
+<a name="section_D"><h2>Problem D</h2>
+<!-- begin ja only -->
+<h3><u>暗号化システム</u></h3>
+<!-- end ja only -->
+
+<div>
+<!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+あるプログラマーが新しい暗号化システムを開発した．
+しかし，そのシステムには異なる複数の文字列が同じ文字列に暗号化されてしまうという問題点があった．
+</p>
+<!-- end ja only -->
+<!-- begin ja only -->
+<p>
+彼のシステムによって暗号化された文字列が与えられる．
+元の文字列を復号するため，暗号化される前の文字列の候補をすべて列挙したい．
+あなたの仕事はそのためのプログラムを作成することである．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+小文字 a-z からなる文字列に対して，暗号化は次のステップに従って実行される．
+</p>
+<ol>
+<li>最初に現れた 'b' を 'a' に置き換える．'b' が存在しなければ何もしない．</li>
+<li>最初に現れた 'c' を 'b' に置き換える．'c' が存在しなければ何もしない．</li>
+...
+<li value="25">最初に現れた 'z' を 'y' に置き換える．'z' が存在しなければ何もしない．</li>
+</ol>
+<!-- end ja only -->
+</div>
+
+<h3>Input</h3>
+<div>
+<!-- begin ja only -->
+<p>
+入力は100個以下のデータセットからなる．
+各データセットは1行であり，暗号化後の文字列を表す．
+文字列は小文字a-zからなり，1文字以上，20文字以下である．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+入力の終わりは，1つの # のみを含む行で示される．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットに対して
+暗号化する前の文字列の候補の数 <i>n</i> を1行目に出力し，
+その後，暗号化前の文字列の候補を1行に1つずつ出力せよ．
+もし <i>n</i> が10以下であれば，候補を辞書順ですべて出力し，
+そうでなければ辞書順における先頭と末尾の5個ずつを辞書順で出力すること．
+</p>
+<!-- end ja only -->
+<!-- begin ja only -->
+<p>
+ここで辞書順は次のように再帰的に定義される．
+空文字列は辞書順で最初に現れる．
+2つの空でない文字列 <i>x = x<sub>1</sub> ... x<sub>k</sub></i> と <i>y = y<sub>1</sub> ... y<sub>l</sub></i> について，
+文字列 <i>x</i> が辞書順で文字列 <i>y</i> より前であるとは，以下を満たすことをいう．
+</p>
+<ul>
+<li><i>x</i><sub>1</sub> が <i>y</i><sub>1</sub> よりアルファベット順 ('a'から'z') で前である．または</li>
+<li><i>x</i><sub>1</sub> と <i>y</i><sub>1</sub> が同じ文字であり <i>x</i><sub>2</sub> ... <i>x</i><sub>k</sub> が <i>y</i><sub>2</sub> ... <i>y</i><sub>l</sub> よりも辞書順で前に現れる</li>
+</ul>
+<p>
+ことをいう．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>enw
+abc
+abcdefghijklmnopqrst
+z
+#
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>1
+fox
+5
+acc
+acd
+bbd
+bcc
+bcd
+17711
+acceeggiikkmmooqqssu
+acceeggiikkmmooqqstt
+acceeggiikkmmooqqstu
+acceeggiikkmmooqrrtt
+acceeggiikkmmooqrrtu
+bcdefghijklmnopqrrtt
+bcdefghijklmnopqrrtu
+bcdefghijklmnopqrssu
+bcdefghijklmnopqrstt
+bcdefghijklmnopqrstu
+0
+</pre>
+</div>
+</a><div align="right"><a name="section_D">(End of Problem D) </a><a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+<a href="#section_G">G</a>
+</div>
+<a name="section_E"><h2>Problem E</h2>
+
+<!-- begin ja only -->
+<h3><u>橋の撤去</u></h3>
+<!-- end ja only -->
+
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+ICPC諸島は，かつて観光地として親しまれていたが，
+このたび，自然保護のため，全ての人工施設を撤廃して人の立ち入りを禁止することが決定された．
+このプロジェクトでいちばん難しいのは島々を結ぶ橋をすべて撤去することである．
+</p>
+<p>
+ICPC諸島には島の数 <i>n</i> に対して <i>n</i>-1 個の橋があり，どの島から島へも，
+橋を何回か渡れば到達することができるようになっている．
+橋の撤去工事の作業チームは，好きな島からスタートして，繰り返し以下のいずれかの行動をとることができる．
+</p>
+<ul>
+<li>今いる島に繋がっている橋を一つ渡って隣の島に移動する．</li>
+<li>今いる島に繋がっている橋を一つ撤去する．撤去作業後は同じ島に留まる．</li>
+</ul>
+<p>
+ただし当然ながら，一度撤去してしまった橋は二度と，どちらの方向にも渡ることができない．
+橋を渡る場合も，橋を撤去する場合も，橋の長さに比例する時間がかかる．
+全ての橋を撤去するのに必要な最短の時間を求めて欲しい．
+作業チームのスタートする島と作業を終える島が異なっていても構わない．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Input</h3>
+
+<div>
+
+<!-- begin ja only -->
+<p>
+入力は100個以下のデータセットからなる．
+各データセットは以下の形式をしている．
+</p>
+<!-- end ja only -->
+
+<blockquote>
+<i>n</i><br>
+<i>p</i><sub>2</sub> <i>p</i><sub>3</sub> ... <i>p<sub>n</sub></i> <br>
+<i>d</i><sub>2</sub> <i>d</i><sub>3</sub> ... <i>d<sub>n</sub></i>
+</blockquote>
+
+<!-- begin ja only -->
+<p>
+<i>n</i> は島の数 (3 &#8804; <i>n</i> &#8804; 800) を表す．島には 1 から <i>n</i> までの識別番号が振られている．
+2行目には <i>n</i>-1 個の島番号が並べられており (1 &#8804; <i>p<sub>i</sub></i> &lt; <i>i</i>)，
+2 から <i>n</i> までの島 <i>i</i> について <i>i</i> と <i>p<sub>i</sub></i>
+が橋で直接繋がれていることを意味する．
+3行目の <i>n</i>-1 個の正整数は対応する橋の長さを表す  (1 &#8804; <i>d<sub>i</sub></i> &#8804; 100,000)．
+すなわち，<i>i</i> と <i>p<sub>i</sub></i> を結ぶ橋の長さは <i>d<sub>i</sub></i> である．
+この橋を渡るのには <i>d<sub>i</sub></i> 単位の時間がかかり，撤去にも同じだけの時間がかかる．
+
+なお，この入力形式では，全ての島と島の間が到達可能であるという条件は常に満たされている．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+入力の終わりは，一つのゼロのみを含む行で示される．
+</p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットについて，全部の橋を撤去するのに必要な最短の単位時間数を，1行に出力せよ．
+各出力行はこの数値以外の文字を含んではならない．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>4
+1 2 3
+10 20 30
+10
+1 2 2 1 5 5 1 8 8
+10 1 1 20 1 1 30 1 1
+3
+1 1
+1 1
+0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>80
+136
+2
+</pre>
+</div>
+</a><div align="right"><a name="section_E">(End of Problem E) </a><a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+<a href="#section_G">G</a>
+</div>
+<a name="section_F"><h2>Problem F</h2>
+
+<!-- begin ja only -->
+<h3><u>サイコロ職人</u></h3>
+<!-- end ja only -->
+
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+サイコロ職人の朝は早い．
+</p>
+<!-- end ja only -->
+
+
+<!-- begin ja only -->
+<p>
+サイコロ職人であるあなたは，顧客からの注文を受け，日々様々なサイコロを製作している．
+今日，あなたは正六面体の形状をしたサイコロで，6つの面のどこにでもよいから
+<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, ..., <i>t</i><sub>6</sub>
+という数が印されたものを作って欲しい，という注文を受けた．
+</p>
+<!-- end ja only -->
+
+
+<!-- begin ja only -->
+<p>
+注文のサイコロを作るために，あなたは平らな板の形状をした専用工具を使う．
+あなたは最初，各面に 0 が書かれたサイコロを持っている．
+工具の上でサイコロを東西南北のいずれかの方向に 90 度回転させると，
+新しく下に来た面に書かれた数が 1 増加する．
+あなたは適切にサイコロを回転させることで，注文通りのサイコロを作ろうとしている．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+最終的に面に書かれた数字は， 一連のステップでサイコロをどの方向に回転させるのかによって決まる．
+各ステップでどの方向にサイコロを回転させたのかを表す文字列を<b>操作列</b>と呼ぶことにする．
+正確には，次のように定義する．
+<i>n</i> 回サイコロを回転させる操作列は <i>n</i> 文字からなる．
+<i>i</i> ステップ目でサイコロを東方向に回転させた場合，操作列の <i>i</i> 文字目は <code>E</code> であるとする．
+同様に，
+西方向に回転させた場合は <code>W</code>，
+南方向に回転させた場合は <code>S</code>，
+北方向に回転させた場合は <code>N</code> であるとする．
+たとえば，<code>NWS</code> という操作列は，最初に北方向にサイコロを回転させ，次に西方向に回転させ，最後に南方向に回転させる，という3回転の操作を表す．
+</p>
+<!-- end ja only -->
+
+
+<!-- begin ja only -->
+<p>
+注文を表す 6 つの整数が与えられるので，注文どおりのサイコロを作る操作列を求めて欲しい．
+複数の操作列がありうるので，辞書順で最も前である操作列を求めてほしい．
+</p>
+<!-- end ja only -->
+</div>
+
+
+
+<h3>Input</h3>
+
+<div>
+
+<!-- begin ja only -->
+<p>
+入力は複数のデータセットからなる．
+データセットの個数は 40 個を超えない．
+各データセットは次の形式で表される．
+</p>
+<!-- end ja only -->
+
+<blockquote>
+<i>t</i><sub>1</sub> <i>t</i><sub>2</sub> <i>t</i><sub>3</sub> <i>t</i><sub>4</sub> <i>t</i><sub>5</sub> <i>t</i><sub>6</sub><br>
+<i>p</i> <i>q</i>
+</blockquote>
+
+
+<!-- begin ja only -->
+<p>
+<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, ..., <i>t</i><sub>6</sub> は注文を表す整数である．
+また，<i>p</i> と <i>q</i> は正の整数であり，出力する操作列の範囲を表す (詳しくは下記を参照せよ)．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+各データセットは
+0 &#8804; <i>t</i><sub>1</sub> &#8804; <i>t</i><sub>2</sub> &#8804; ... &#8804; <i>t</i><sub>6</sub> &#8804; 5,000
+および
+1 &#8804; <i>p</i> &#8804; <i>q</i> &#8804; <i>t</i><sub>1</sub>+<i>t</i><sub>2</sub>+...+<i>t</i><sub>6</sub>
+を満たす．
+入力は 6 つのゼロからなる行で終わる．
+</p>
+<!-- end ja only -->
+
+
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットについて，注文されたサイコロを作る辞書順で最小の操作列の <i>p</i> 文字目から <i>q</i> 文字目までを出力せよ (<i>p</i> 文字目と <i>q</i> 文字目も含む)．
+作ることができない場合，<code>impossible</code> と出力せよ．
+</p>
+<!-- end ja only -->
+
+
+<!-- begin ja only -->
+<p>
+ここで辞書順は次のように再帰的に定義される．
+空文字列は辞書順で最初に現れる．
+2つの空でない文字列 <i>x</i> = <i>x</i><sub>1</sub> ... <i>x</i><sub><i>k</i></sub> と <i>y</i> = <i>y</i><sub>1</sub> ... <i>y</i><sub><i>l</i></sub> について，文字列 <i>x</i> が文字列 <i>y</i> より辞書順で前であるとは，
+</p><ul>
+<li> <i>x</i><sub>1</sub> が <i>y</i><sub>1</sub> よりアルファベット順 ('A'から'Z') で前である，または </li>
+<li> <i>x</i><sub>1</sub> と <i>y</i><sub>1</sub> が同じ文字であり <i>x</i><sub>2</sub> ... <i>x</i><sub><i>k</i></sub> が <i>y</i><sub>2</sub> ... <i>y</i><sub><i>l</i></sub> よりも辞書順で前である</li>
+</ul>
+ことをいう．
+<p></p>
+<!-- end ja only -->
+
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>1 1 1 1 1 1
+1 6
+1 1 1 1 1 1
+4 5
+0 0 0 0 0 2
+1 2
+0 0 2 2 2 4
+5 9
+1 2 3 4 5 6
+15 16
+0 1 2 3 5 9
+13 16
+2 13 22 27 31 91
+100 170
+0 0 0 0 0 0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>EEENEE
+NE
+impossible
+NSSNW
+EN
+EWNS
+SNSNSNSNSNSNSNSNSNSNSNSSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNSNWEWE
+</pre>
+</div>
+
+
+</a><div align="right"><a name="section_F">(End of Problem F) </a><a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+<a href="#section_G">G</a>
+</div>
+<a name="section_G"><h2>Problem G</h2>
+
+<!-- begin ja only -->
+<h3><u>円を横切るな！</u></h3>
+<!-- end ja only -->
+
+<div>   <!-- please enclose each h3 level section with div -->
+<!-- begin ja only -->
+<p>
+平面上に 1 つ以上の円が配置されている．
+任意の 2 つの円は，中心位置と半径の両方もしくは一方が異なる．
+円は，他の円と共通領域をもつことはあるが，
+3 つ以上の円が共通領域もしくは共通点をもつことはない．
+円が，他の円を含むことや，2 点で交差することはあるが，
+2 つの円の円周が 1 点で接することはないと仮定してよい．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+あなたの仕事は，指定された 2 点 <i>P</i> と <i>Q</i>
+を結ぶようなパスで，どの円弧とも交差しないものが存在するか，答えることである．
+円の配置に対して，点の組は 1 組以上与えられる．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+Figure G-1 の例では，円弧と交差することなく <i>P</i> と <i>Q</i><sub>1</sub> を結ぶことはできるが，円弧と交差することなく <i>P</i> と <i>Q</i><sub>2</sub>, <i>Q</i><sub>3</sub>, <i>Q</i><sub>4</sub> を結ぶことはできない．
+</p>
+<!-- end ja only -->
+
+<center>
+<img src="All%20Problems_files/G0.png"><br>
+<!-- begin ja only -->
+<p>図 G-1: 円および点の配置例</p>
+<!-- end ja only -->
+</center>
+
+</div>
+
+<h3>Input</h3>
+
+<div>
+<!-- begin ja only -->
+<p>
+入力は複数のデータセットからなり，
+各データセットは次の形式で表される．
+</p>
+<!-- end ja only -->
+
+<p>
+</p><blockquote>
+<i>n</i> <i>m</i><br>
+<i>Cx</i><sub>1</sub> <i>Cy</i><sub>1</sub> <i>r</i><sub>1</sub> <br>
+...<br>
+<i>Cx</i><sub><i>n</i></sub> <i>Cy</i><sub><i>n</i></sub> <i>r</i><sub><i>n</i></sub> <br>
+<i>Px</i><sub>1</sub> <i>Py</i><sub>1</sub> <i>Qx</i><sub>1</sub> <i>Qy</i><sub>1</sub> <br>
+...<br>
+<i>Px</i><sub><i>m</i></sub> <i>Py</i><sub><i>m</i></sub> <i>Qx</i><sub><i>m</i></sub> <i>Qy</i><sub><i>m</i></sub> <br>
+</blockquote>
+<p></p>
+
+<!-- begin ja only -->
+<p>
+データセットの最初の行は，
+空白文字 1 個で区切られた 2 個の整数 <i>n</i>, <i>m</i> からなる．
+<i>n</i> は，円の個数であり，1 &#8804; <i>n</i> &#8804; 100 と仮定してよい．
+<i>m</i> は，点の組の個数であり，1 &#8804; <i>m</i> &#8804; 10
+と仮定してよい．
+続く <i>n</i> 行のそれぞれは，空白文字 1 個で区切られた 3 個の整数からなる．
+(<i>Cx</i><sub><i>i</i></sub>, <i>Cy</i><sub><i>i</i></sub>) と <i>r</i><sub><i>i</i></sub> は，
+<i>i</i> 番目の円の中心の位置と半径を表す．
+引き続く <i>m</i> 行のそれぞれは，空白文字 1 個で区切られた 4 個の整数からなる．
+この 4 個の整数は 2 つの異なる点
+<i>P</i><sub><i>j</i></sub> = (<i>Px</i><sub><i>j</i></sub>, <i>Py</i><sub><i>j</i></sub>) と
+<i>Q</i><sub><i>j</i></sub> =(<i>Qx</i><sub><i>j</i></sub>, <i>Qy</i><sub><i>j</i></sub>)
+の座標を与える．
+この 2 点 <i>P</i><sub><i>j</i></sub> と <i>Q</i><sub><i>j</i></sub>
+が <i>j</i> 番目の点の組である．
+0 &#8804; <i>Cx</i><sub><i>i</i></sub> &#8804; 10000,
+0 &#8804; <i>Cy</i><sub><i>i</i></sub> &#8804; 10000,
+1 &#8804; <i>r</i><sub><i>i</i></sub> &#8804;  1000,
+0 &#8804; <i>Px</i><sub><i>j</i></sub> &#8804; 10000,
+0 &#8804; <i>Py</i><sub><i>j</i></sub> &#8804; 10000,
+0 &#8804; <i>Qx</i><sub><i>j</i></sub> &#8804; 10000,
+0 &#8804; <i>Qy</i><sub><i>j</i></sub> &#8804; 10000 と仮定してよい．
+また，<i>P</i><sub><i>j</i></sub> および <i>Q</i><sub><i>j</i></sub> は，どの円の円周上にも存在することはない．
+</p>
+<!-- end ja only -->
+
+<!-- begin ja only -->
+<p>
+入力の終わりは，空白文字 1 個で区切られた 2 個のゼロからなる行で表される．
+</p>
+<!-- end ja only -->
+
+
+<!-- begin ja only -->
+<p>
+なお，図 G-1 は，後に示す Sample Input 中の最初のデータセットにおける
+円と点の配置を表している．
+図 G-2 は，Sample Input 中の残りのデータセットにおける配置を表している．
+</p>
+<!-- end ja only -->
+
+<center>
+<img src="All%20Problems_files/G1.png"><br>
+<!-- begin ja only -->
+<p>図 G-2: 円および点の配置例</p>
+<!-- end ja only -->
+</center>
+
+</div>
+
+<h3>Output</h3>
+<div>
+<!-- begin ja only -->
+<p>
+各データセットに対して，
+<i>m</i> 個の結果を，空白文字 1 個で区切って，1 行に出力せよ．
+ただし，<i>j</i> 番目の結果には <i>P</i><sub><i>j</i></sub> と <i>Q</i><sub><i>j</i></sub> を
+結ぶパスが存在する場合は "YES" を，存在しない場合は
+"NO" を出力すること．
+</p>
+<!-- end ja only -->
+</div>
+
+<h3>Sample Input</h3>
+<div>
+<pre>5 3
+0 0 1000
+1399 1331 931
+0 1331 500
+1398 0 400
+2000 360 340
+450 950 1600 380
+450 950 1399 1331
+450 950 450 2000
+1 2
+50 50 50
+0 10 100 90
+0 10 50 50
+2 2
+50 50 50
+100 50 50
+40 50 110 50
+40 50 0 0
+4 1
+25 100 26
+75 100 26
+50 40 40
+50 160 40
+50 81 50 119
+6 1
+100 50 40
+0 50 40
+50 0 48
+50 50 3
+55 55 4
+55 105 48
+50 55 55 50
+20 6
+270 180 50
+360 170 50
+0 0 50
+10 0 10
+0 90 50
+0 180 50
+90 180 50
+180 180 50
+205 90 50
+180 0 50
+65 0 20
+75 30 16
+90 78 36
+105 30 16
+115 0 20
+128 48 15
+128 100 15
+280 0 30
+330 0 30
+305 65 42
+0 20 10 20
+0 20 10 0
+50 30 133 0
+50 30 133 30
+90 40 305 20
+90 40 240 30
+16 2
+0 0 50
+0 90 50
+0 180 50
+90 180 50
+180 180 50
+205 90 50
+180 0 50
+65 0 20
+115 0 20
+90 0 15
+280 0 30
+330 0 30
+305 65 42
+75 40 16
+90 88 36
+105 40 16
+128 35 250 30
+90 50 305 20
+0 0
+</pre>
+</div>
+
+<h3>Output for the Sample Input</h3>
+<div>
+<pre>YES NO NO
+YES NO
+NO NO
+NO
+YES
+YES NO NO YES NO NO
+NO NO
+</pre>
+</div>
+</a><div align="right"><a name="section_G">(End of Problem G) </a><a href="#section_A">A</a>
+<a href="#section_B">B</a>
+<a href="#section_C">C</a>
+<a href="#section_D">D</a>
+<a href="#section_E">E</a>
+<a href="#section_F">F</a>
+<a href="#section_G">G</a>
+</div>
+ </td>                     
+</tr>                      
+</tbody></table>                   
+
+
+
+
+
+
+
+</body></html>

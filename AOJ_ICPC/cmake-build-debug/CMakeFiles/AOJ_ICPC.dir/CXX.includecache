@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Kayg/Workspace/Competitive_programming/AOJ_ICPC/1602.cpp
+iostream
+-
+map
+-
+queue
+-
+stack
+-
+string
+-
+vector
+-
+

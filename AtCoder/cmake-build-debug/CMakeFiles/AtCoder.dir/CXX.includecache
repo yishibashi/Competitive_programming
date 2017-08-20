@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Kayg/Workspace/Competitive_programming/AtCoder/ABC/066/D.cpp
+algorithm
+-
+iostream
+-
+numeric
+-
+queue
+-
+stack
+-
+string
+-
+vector
+-
+

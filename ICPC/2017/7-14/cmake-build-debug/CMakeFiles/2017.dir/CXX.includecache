@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Kayg/Workspace/Competitive_programming/ICPC/2017/prob/B.cpp
+algorithm
+-
+iostream
+-
+numeric
+-
+string
+-
+vector
+-
+
