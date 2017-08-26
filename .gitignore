@@ -4,3 +4,4 @@ a.out
 CMakeLists.txt
 .python-version
 note/
+*.jar
