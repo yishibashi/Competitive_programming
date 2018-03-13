@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o"
+  "CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o"
   "AtCoder.pdb"
   "AtCoder"
 )

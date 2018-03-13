@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/Kayg/Workspace/Competitive_programming/AtCoder/ABC/066/D.cpp" "/Users/Kayg/Workspace/Competitive_programming/AtCoder/cmake-build-debug/CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o"
+  "/Users/Kayg/Workspace/Competitive_programming/AtCoder/DISCO2017/D.cpp" "/Users/Kayg/Workspace/Competitive_programming/AtCoder/cmake-build-debug/CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

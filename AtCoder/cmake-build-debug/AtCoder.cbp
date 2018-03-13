@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/Kayg/Workspace/Competitive_programming/AtCoder/ABC/066/D.cpp">
+		<Unit filename="/Users/Kayg/Workspace/Competitive_programming/AtCoder/DISCO2017/D.cpp">
 			<Option target="AtCoder"/>
 		</Unit>
 		<Unit filename="/Users/Kayg/Workspace/Competitive_programming/AtCoder/CMakeLists.txt">

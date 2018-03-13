@@ -57,38 +57,38 @@ include CMakeFiles/AtCoder.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/AtCoder.dir/flags.make
 
-CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o: CMakeFiles/AtCoder.dir/flags.make
-CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o: ../ABC/066/D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Kayg/Workspace/Competitive_programming/AtCoder/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o -c /Users/Kayg/Workspace/Competitive_programming/AtCoder/ABC/066/D.cpp
+CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o: CMakeFiles/AtCoder.dir/flags.make
+CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o: ../DISCO2017/D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/Kayg/Workspace/Competitive_programming/AtCoder/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o -c /Users/Kayg/Workspace/Competitive_programming/AtCoder/DISCO2017/D.cpp
 
-CMakeFiles/AtCoder.dir/ABC/066/D.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AtCoder.dir/ABC/066/D.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Kayg/Workspace/Competitive_programming/AtCoder/ABC/066/D.cpp > CMakeFiles/AtCoder.dir/ABC/066/D.cpp.i
+CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Kayg/Workspace/Competitive_programming/AtCoder/DISCO2017/D.cpp > CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.i
 
-CMakeFiles/AtCoder.dir/ABC/066/D.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AtCoder.dir/ABC/066/D.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Kayg/Workspace/Competitive_programming/AtCoder/ABC/066/D.cpp -o CMakeFiles/AtCoder.dir/ABC/066/D.cpp.s
+CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Kayg/Workspace/Competitive_programming/AtCoder/DISCO2017/D.cpp -o CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.s
 
-CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o.requires:
+CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o.requires:
 
-.PHONY : CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o.requires
+.PHONY : CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o.requires
 
-CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o.provides: CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o.requires
-	$(MAKE) -f CMakeFiles/AtCoder.dir/build.make CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o.provides.build
-.PHONY : CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o.provides
+CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o.provides: CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o.requires
+	$(MAKE) -f CMakeFiles/AtCoder.dir/build.make CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o.provides.build
+.PHONY : CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o.provides
 
-CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o.provides.build: CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o
+CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o.provides.build: CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o
 
 
 # Object files for target AtCoder
 AtCoder_OBJECTS = \
-"CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o"
+"CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o"
 
 # External object files for target AtCoder
 AtCoder_EXTERNAL_OBJECTS =
 
-AtCoder: CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o
+AtCoder: CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o
 AtCoder: CMakeFiles/AtCoder.dir/build.make
 AtCoder: CMakeFiles/AtCoder.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/Kayg/Workspace/Competitive_programming/AtCoder/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable AtCoder"
@@ -99,7 +99,7 @@ CMakeFiles/AtCoder.dir/build: AtCoder
 
 .PHONY : CMakeFiles/AtCoder.dir/build
 
-CMakeFiles/AtCoder.dir/requires: CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o.requires
+CMakeFiles/AtCoder.dir/requires: CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o.requires
 
 .PHONY : CMakeFiles/AtCoder.dir/requires
 

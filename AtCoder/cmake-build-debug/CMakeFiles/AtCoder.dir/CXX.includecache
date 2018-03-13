@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/Kayg/Workspace/Competitive_programming/AtCoder/ABC/066/D.cpp
-algorithm
--
+/Users/Kayg/Workspace/Competitive_programming/AtCoder/DISCO2017/D.cpp
 iostream
 -
-numeric
--
-queue
--
-stack
+vector
 -
 string
--
-vector
 -
 

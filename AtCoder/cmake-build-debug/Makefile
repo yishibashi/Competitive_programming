@@ -123,32 +123,32 @@ AtCoder/fast:
 	$(MAKE) -f CMakeFiles/AtCoder.dir/build.make CMakeFiles/AtCoder.dir/build
 .PHONY : AtCoder/fast
 
-ABC/066/D.o: ABC/066/D.cpp.o
+DISCO2017/D.o: DISCO2017/D.cpp.o
 
-.PHONY : ABC/066/D.o
+.PHONY : DISCO2017/D.o
 
 # target to build an object file
-ABC/066/D.cpp.o:
-	$(MAKE) -f CMakeFiles/AtCoder.dir/build.make CMakeFiles/AtCoder.dir/ABC/066/D.cpp.o
-.PHONY : ABC/066/D.cpp.o
+DISCO2017/D.cpp.o:
+	$(MAKE) -f CMakeFiles/AtCoder.dir/build.make CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.o
+.PHONY : DISCO2017/D.cpp.o
 
-ABC/066/D.i: ABC/066/D.cpp.i
+DISCO2017/D.i: DISCO2017/D.cpp.i
 
-.PHONY : ABC/066/D.i
+.PHONY : DISCO2017/D.i
 
 # target to preprocess a source file
-ABC/066/D.cpp.i:
-	$(MAKE) -f CMakeFiles/AtCoder.dir/build.make CMakeFiles/AtCoder.dir/ABC/066/D.cpp.i
-.PHONY : ABC/066/D.cpp.i
+DISCO2017/D.cpp.i:
+	$(MAKE) -f CMakeFiles/AtCoder.dir/build.make CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.i
+.PHONY : DISCO2017/D.cpp.i
 
-ABC/066/D.s: ABC/066/D.cpp.s
+DISCO2017/D.s: DISCO2017/D.cpp.s
 
-.PHONY : ABC/066/D.s
+.PHONY : DISCO2017/D.s
 
 # target to generate assembly for a file
-ABC/066/D.cpp.s:
-	$(MAKE) -f CMakeFiles/AtCoder.dir/build.make CMakeFiles/AtCoder.dir/ABC/066/D.cpp.s
-.PHONY : ABC/066/D.cpp.s
+DISCO2017/D.cpp.s:
+	$(MAKE) -f CMakeFiles/AtCoder.dir/build.make CMakeFiles/AtCoder.dir/DISCO2017/D.cpp.s
+.PHONY : DISCO2017/D.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... AtCoder"
-	@echo "... ABC/066/D.o"
-	@echo "... ABC/066/D.i"
-	@echo "... ABC/066/D.s"
+	@echo "... DISCO2017/D.o"
+	@echo "... DISCO2017/D.i"
+	@echo "... DISCO2017/D.s"
 .PHONY : help
 
 
